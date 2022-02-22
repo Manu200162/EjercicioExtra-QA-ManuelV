@@ -18,14 +18,12 @@ public class BecaEstudio {
         String result ="";
         if(Helpers.aplicaBeca(ci)){
             if(utils.getNota(ci)>=90 && utils.getNota(ci)<=100){
-
+                result="SI APLICA A BECA";
             }else if(utils.getNota(ci)>=0){
-
-            }else{
-
+                result="NO APLICA A BECA POR PROMEDIO ACADEMICO";
             }
         }else{
-
+            result="EL ESTUDIANTE NO CURSO AUN EL 60% DE LAS MATERIAS";
         }
         return result;
     }
