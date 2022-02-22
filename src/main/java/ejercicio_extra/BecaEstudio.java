@@ -17,9 +17,10 @@ public class BecaEstudio {
     public String getResultBeca(int ci){
         String result ="";
         if(Helpers.aplicaBeca(ci)){
-            if(utils.getNota(ci)>=90 && utils.getNota(ci)<=100){
+            int nota=utils.getNota(ci);
+            if(nota>=90 && nota<=100){
                 result="SI APLICA A BECA";
-            }else if(utils.getNota(ci)>=0){
+            }else if (nota >=0){
                 result="NO APLICA A BECA POR PROMEDIO ACADEMICO";
             }
         }else{
